@@ -21,6 +21,7 @@ public class ItemManager {
         List <String> lore = new ArrayList<>();
         lore.add("§7This is a test item.");
         lore.add("Hopefully it exist when i arrive");
+        meta.setMaxStackSize(1);
         meta.setLore(lore);
         item.setItemMeta(meta);
         TestBucket = item;
