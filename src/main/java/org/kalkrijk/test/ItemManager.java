@@ -23,6 +23,7 @@ public class ItemManager {
         lore.add("Hopefully it exist when i arrive");
         meta.setLore(lore);
         item.setItemMeta(meta);
+        TestBucket = item;
     }
 
 
