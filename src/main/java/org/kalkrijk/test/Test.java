@@ -7,7 +7,8 @@ public final class Test extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        System.out.println("Yo");
+        System.out.println("Yooooooooooo000000000000 888888888!!78§!é§è!7");
+        ItemManager.init();
     }
 
     @Override
