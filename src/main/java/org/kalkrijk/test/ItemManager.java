@@ -1,7 +1,10 @@
 package org.kalkrijk.test;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
@@ -26,6 +29,13 @@ public class ItemManager {
         meta.setLore(lore);
         item.setItemMeta(meta);
         TestBucket = item;
+
+        ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(Test.plugin_main, "testbucket") ,TestBucket);
+        recipe.shape("   ", "ili", "iii");
+        recipe.setIngredient('i', Material.IRON_INGOT);
+        recipe.setIngredient('l', Material.LAVA_BUCKET);
+
+        Bukkit.addRecipe(recipe);
     }
 
 
