@@ -18,19 +18,21 @@ public class ItemEvents implements Listener {
         Player player = event.getPlayer();
         ItemStack item = player.getInventory().getItemInMainHand();
         ItemMeta meta = item.getItemMeta();
-        assert meta != null;
-        String name = meta.getDisplayName();
-        if(name.equals("§9Test Bucket")){
-            if (Cooldown.checkCooldown(event.getPlayer())){
-                player.playEffect(player.getLocation(), Effect.BAT_TAKEOFF, null);
-                player.setVelocity(new Vector(player.getLocation().getDirection().normalize().getX(), 1, player.getLocation().getDirection().normalize().getZ()));
-                Cooldown.setCooldown(event.getPlayer(), 5);
-            }
-            else{
-                player.sendMessage(ChatColor.RED + "ur gay, its on cooldown, " + Math.round(Cooldown.cooldowns.get(player.getUniqueId()) - System.currentTimeMillis())/1000 + " seconds left");
-            }
+        if (meta != null){
+            String name = meta.getDisplayName();
+            if(name.equals("§9Test Bucket")){
+                if (Cooldown.checkCooldown(event.getPlayer())){
+                    player.playEffect(player.getLocation(), Effect.BAT_TAKEOFF, null);
+                    player.setVelocity(new Vector(player.getLocation().getDirection().normalize().getX(), 1, player.getLocation().getDirection().normalize().getZ()));
+                    Cooldown.setCooldown(event.getPlayer(), 5);
+                }
+                else{
+                    player.sendMessage(ChatColor.RED + "ur gay, its on cooldown, " + Math.round(Cooldown.cooldowns.get(player.getUniqueId()) - System.currentTimeMillis())/1000 + " seconds left");
+                }
 
+            }
         }
+
     }
 
     @EventHandler

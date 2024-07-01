@@ -4,5 +4,5 @@ main: org.kalkrijk.test.Test
 api-version: '1.20'
 commands:
   gtb:
-    description: yea
+    description: gives a test bucket.
     usage: /<command>
