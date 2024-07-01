@@ -1,9 +1,8 @@
 name: test
 version: '1.0-SNAPSHOT'
 main: org.kalkrijk.test.Test
-api-version: '1.20.6'
+api-version: '1.20'
 commands:
   gtb:
     description: yea
     usage: /<command>
-

@@ -17,6 +17,7 @@ public class ItemManager {
     private static void createTestBucket(){
         ItemStack item = new ItemStack(Material.BUCKET, 1);
         ItemMeta meta = item.getItemMeta();
+        assert meta != null;
         meta.setDisplayName("§9Test Bucket");
         List <String> lore = new ArrayList<>();
         lore.add("§7This is a test item.");
